@@ -21,6 +21,24 @@ export const Hero: React.FC = () => {
             clipPath: 'polygon(0 0, 65% 0, 45% 100%, 0 100%)',
           }}
         />
+
+        {/* Subtle Animated Plum Gradient Depth Layer */}
+        <motion.div 
+          className="absolute inset-0 w-full h-full mix-blend-multiply opacity-20 pointer-events-none"
+          animate={{
+             backgroundPosition: ['0% 0%', '100% 100%'],
+          }}
+          transition={{
+             duration: 15,
+             repeat: Infinity,
+             repeatType: "reverse",
+             ease: "linear"
+          }}
+          style={{
+             backgroundImage: 'linear-gradient(45deg, transparent 0%, rgba(122, 63, 82, 0.4) 50%, transparent 100%)',
+             backgroundSize: '200% 200%'
+          }}
+        />
       </div>
 
       {/* Top Navigation Bar */}

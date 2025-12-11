@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, PanInfo } from 'framer-motion';
+import { motion, type PanInfo, type Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight, User } from 'lucide-react';
 import { EYE_SPY_COLLECTION } from '../constants';
 import { SectionId } from '../types';
@@ -41,9 +41,9 @@ export const EyeSpy: React.FC = () => {
   };
 
   // Editorial Transition: 0.45s with smooth cubic easing
-  const transition = { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] };
+  const transition = { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] };
 
-  const variants = {
+  const variants: Variants = {
     center: { 
       x: '0%', 
       scale: 1.0, 
